@@ -49,20 +49,3 @@ describe('Eliminación de Estudiantes', () => {
 
 it('Debería permitir eliminar un estudiante', () => { cy.visit('/estudiantes'); // URL de la lista de estudiantes cy.get('button.delete').first().click(); // Botón para eliminar el primer estudiante cy.contains('Confirmar eliminación').click(); // Confirmación de eliminación cy.contains('Estudiante eliminado exitosamente').should('be.visible'); }); });
 
-### Registrar pago de estudiante
-
-describe('Gestión de Pagos de Estudiantes', () => {
-
-it('Debería permitir registrar un pago para un estudiante', () => { cy.visit('/pagos/registro'); // URL del formulario de registro de pagos cy.get('select[name="estudiante"]').select('Madaì Cuc'); // Seleccionar estudiante cy.get('input[name="monto"]').type('150'); cy.get('input[name="fecha"]').type('2024-11-13'); cy.get('button[type="submit"]').click(); cy.contains('Pago registrado exitosamente').should('be.visible'); }); });
-
-### Historia de pagos
-
-describe('Consulta de Pagos de Estudiantes', () => {
-
-it('Debería mostrar el historial de pagos de un estudiante', () => { cy.visit('/pagos'); // URL de la lista de pagos cy.get('table').should('be.visible'); // Verifica que la tabla de pagos sea visible cy.get('table').find('tr').its('length').should('be.gt', 1); // Verifica que haya al menos un pago registrado }); });
-
-### Eliminar pago de estudiante
-
-describe('Eliminación de Pagos de Estudiantes', () => {
-
-it('Debería permitir eliminar un pago de un estudiante', () => { cy.visit('/pagos'); // URL de la lista de pagos cy.get('button.delete').first().click(); // Botón para eliminar el primer pago cy.contains('Confirmar eliminación').click(); // Confirmación de eliminación cy.contains('Pago eliminado exitosamente').should('be.visible'); }); });
