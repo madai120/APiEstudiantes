@@ -29,7 +29,7 @@ npx cypress run
 
 describe('Gestión de Estudiantes', () => {
 
-it('Debería permitir crear un nuevo estudiante', () => { cy.visit('/registro'); // URL del formulario de registro de estudiantes cy.get('input[name="nombre"]').type('Maria Alvarado'); cy.get('input[name="email"]').type('maria.alvarado@example.com'); cy.get('input[name="edad"]').type('22'); cy.get('input[name="curso"]').type('Matemáticas'); cy.get('button[type="submit"]').click(); cy.contains('Estudiante creado exitosamente').should('be.visible'); }); });
+it('Debería permitir crear un nuevo estudiante', () => { cy.visit('/registro'); // URL del formulario de registro de estudiantes cy.get('input[name="nombre"]').type('Madaì Cuc'); cy.get('input[name="email"]').type('maria.alvarado@example.com'); cy.get('input[name="edad"]').type('22'); cy.get('input[name="curso"]').type('Matemáticas'); cy.get('button[type="submit"]').click(); cy.contains('Estudiante creado exitosamente').should('be.visible'); }); });
 
 ### Listar Estudiante
 
